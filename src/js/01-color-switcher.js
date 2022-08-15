@@ -3,8 +3,8 @@ const refs = {
   startBtn: document.querySelector('button[data-start]'),
   stopBtn: document.querySelector('button[data-stop]')
 }
-colorSwitcherId = null;
-isColorSwitcherActive = false;
+let colorSwitcherId = null;
+let isColorSwitcherActive = false;
 
 refs.startBtn.addEventListener('click', onStartBtnClick);
 refs.stopBtn.addEventListener('click', onStopBtnClick)

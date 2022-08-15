@@ -38,7 +38,7 @@ refs.startBtn.addEventListener('click', onTimerStar);
 
 // Disabled start btn after page reloading and befor right date choosing:
 refs.startBtn.disabled = true;
-intervalId = null;
+let intervalId = null;
 
 // flatpickr library need:
 let chosenDate = flatpickr(refs.dateInput, options);
@@ -46,7 +46,7 @@ let chosenDate = flatpickr(refs.dateInput, options);
 
 function onTimerStar() {
   
-  intervalId = setInterval(() => {
+ intervalId = setInterval(() => {
     
     let dateDifferenceInMs = (Date.parse(chosenDate.selectedDates[0])) - (Date.now());
     
